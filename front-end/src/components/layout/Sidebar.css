@@ -1,0 +1,160 @@
+/*
+|--------------------------------------------------------------------------
+|   Sidebar Navigation
+|--------------------------------------------------------------------------
+*/
+
+.nav {
+    font-size: 2.4rem;
+    height: 100vh;
+    max-width: 100%;
+    position: fixed;
+    background-color: var(--c-dark-grey);
+    font-family: "Roboto Slab", "Tahoma", sans-serif;
+}
+
+.adminNav{
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-flow: column; 
+  padding-bottom: 2rem;
+}
+
+.catNav {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.headerNav{
+  background-color: #ffb900;
+  padding: 2rem;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-main__dropdown{
+  transform: translateY(3px);
+}
+
+.nav-main__logo{
+  margin-left: 2rem;
+}
+
+.catNav__filterButton {
+  background: transparent;
+  border: 0px solid transparent;
+  font-size: 2.4rem;
+  font-family: var(--font-family-heading);
+  width: 90%;
+  text-align: left;
+}
+
+.navLink, .catNav__filterButton {
+    display: block;
+    text-decoration: none;
+    color: var(--c-dark-font);
+    margin: 0 2rem;
+    border-top: 1px solid #50585a;
+    border-bottom: 1px solid #50585a; 
+}
+
+.navLink:hover, .catNav__filterButton:hover{
+  background-color: #50585a;
+}
+
+.catNav__filterButton--active{
+  background-color: var(--c-primary-button);
+  color: var(--c-light-font);
+}
+.catNav__filterButton--active:hover{
+  background-color: var(--c-primary-button-hover);
+  color: var(--c-light-font);
+}
+
+
+
+.nav-main__icon {
+    transform: translateY(3px);
+    margin-right: 2rem;
+}
+
+
+
+/* navsection separator */
+.topNav,
+.catNav,
+.adminNav {
+    border-bottom: 1px solid #50585a;
+}
+
+
+.botNav{
+    position: absolute;
+    width: 100%;
+    bottom: 2rem;
+}
+
+.botNav > .navLink:not(:last-child){
+  margin-bottom: 1.5rem;
+}
+
+.botNav > .navLink:last-child{
+  margin-top: 5rem;
+}
+
+
+
+@media only screen and (max-width: 45rem){
+  .nav{
+    padding-bottom: 66.5px;
+    position: relative;
+  }
+
+  .nav{
+    height: 5rem;
+  }
+  .catNav{
+    display: none;  
+  }
+  .adminNav{
+    display: none;  
+  }
+  
+  .botNav{
+    display: none;  
+  }
+
+
+}
+@media only screen and (max-height: 45rem){
+  .nav{
+    padding-bottom: 66.5px;
+    position: relative;
+  }
+
+  .nav{
+    height: 5rem;
+  }
+
+  
+  
+  .catNav{
+    display: none;  
+    
+  }
+  .adminNav{
+    display: none;  
+  }
+  
+  .botNav{
+    display: none;  
+  }
+
+
+}
